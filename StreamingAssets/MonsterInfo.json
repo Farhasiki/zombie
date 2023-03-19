@@ -1,0 +1,8 @@
+[
+    {"id":0,"res":"Monster/Z1","animator":"Animator/Monster/Aggresive","atk":1,"moveSpeed":2,"roundSpeed":100,"hp":2,"atkOffst":0.8,"atkDistance":1,"money":20},
+    {"id":1,"res":"Monster/Z2","animator":"Animator/Monster/Broken","atk":3,"moveSpeed":1,"roundSpeed":50,"hp":3,"atkOffst":1,"atkDistance":2,"money":30},
+    {"id":2,"res":"Monster/Z3","animator":"Animator/Monster/Calm","atk":5,"moveSpeed":3,"roundSpeed":60,"hp":5,"atkOffst":0.4,"atkDistance":2,"money":50},
+    {"id":3,"res":"Monster/Z4","animator":"Animator/Monster/Crawl","atk":10,"moveSpeed":0.5,"roundSpeed":30,"hp":10,"atkOffst":0.3,"atkDistance":2,"money":70},
+    {"id":4,"res":"Monster/Z5","animator":"Animator/Monster/AggresiveRun","atk":8,"moveSpeed":4,"roundSpeed":100,"hp":40,"atkOffst":0.5,"atkDistance":3,"money":100},
+    {"id":5,"res":"Monster/Z6","animator":"Animator/Monster/CalmTank","atk":20,"moveSpeed":0.6,"roundSpeed":50,"hp":60,"atkOffst":2,"atkDistance":5,"money":150}
+]
