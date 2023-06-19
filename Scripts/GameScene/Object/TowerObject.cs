@@ -9,7 +9,7 @@ public class TowerObject : MonoBehaviour
     public List<Transform> firePoints;//开火点
     private TowerInfo towerInfo;//炮台关联数据
     private MonsterObject targetObj;//当前目标
-    private List<MonsterObject> targetObjs;//当前目标
+    private List<MonsterObject> targetObjs = new List<MonsterObject>();//当前目标
     private float roundSpeed = 20;//炮塔旋转速度
     private float lastAtk = 0;
     private Vector3 monsterPos;
@@ -24,9 +24,7 @@ public class TowerObject : MonoBehaviour
         if(towerInfo.type == 1){//可抽象
             if(targetObj == null || targetObj.isDead || 
                 Vector3.Distance(targetObj.transform.position,transform.position) > towerInfo.atkRange){
-                print(towerInfo.atkRange);
                 targetObj = GameLeveLMgr.Instance.FindMonster(transform.position,towerInfo.atkRange);
-                print(targetObj);
             }
             if(targetObj == null)return ;
             //获取目标点
@@ -48,6 +46,7 @@ public class TowerObject : MonoBehaviour
 
         }else if(towerInfo.type == 2){
             targetObjs = GameLeveLMgr.Instance.FindMonsters(head.transform.position,towerInfo.atkRange);
+            if(targetObjs.Count == 0) return ;
             if(Time.time - lastAtk >= towerInfo.offsetTime){
                 //创建开火特效
                 GameObject obj = Instantiate(Resources.Load<GameObject>(towerInfo.eff),head.position,head.rotation);   
@@ -55,7 +54,7 @@ public class TowerObject : MonoBehaviour
                 for (int i = 0; i < targetObjs.Count; i++){
                     targetObjs[i].Wound(towerInfo.atk);
                 }
-
+                lastAtk = Time.time;
             }
         }
     }

@@ -1,5 +1,5 @@
 [
-    {"id":1,"imgRes":"imgScene/1","name":"疯狂树林","sceneName":"GameScene","tips":"啦啦啦啦啦啦","towerHP":100,"money":10000,"wave":5},
+    {"id":1,"imgRes":"imgScene/1","name":"疯狂树林","sceneName":"GameScene","tips":"啦啦啦啦啦啦","towerHP":100,"money":100,"wave":5},
     {"id":2,"imgRes":"imgScene/2","name":"极寒雪地","sceneName":"GameScene","tips":"嘻嘻嘻嘻","towerHP":100,"money":300,"wave":10},
     {"id":3,"imgRes":"imgScene/3","name":"熔岩旱土","sceneName":"GameScene","tips":"哈哈哈哈哈啊","towerHP":100,"money":500,"wave":15}
 ]
